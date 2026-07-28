@@ -31,18 +31,20 @@
             </div>
             <div>
               <h3 class="text-base font-black text-white m-0 flex items-center gap-2">
-                Nebiyu Elias Talefe
+                Neba 🇪🇹
                 <span class="text-[9px] bg-red-950 text-red-300 px-1.5 py-0.5 rounded border border-red-800 font-mono">Speaker</span>
               </h3>
               <p class="text-xs text-red-400 font-semibold m-0 mt-0.5">
-                Full-Stack Architect & Mobile Craftsman (7+ Years Exp)
+                Full-Stack Engineer (7+ Years Exp) • 🇪🇹 Ethiopia • ASUS • 508.dev
               </p>
             </div>
           </div>
 
-          <p class="text-xs text-slate-300 m-0 leading-relaxed">
-            Helping startups & tech teams build scalable Rails backends and high-performance Hotwire Native mobile apps.
-          </p>
+          <ul class="text-xs text-slate-300 space-y-1 list-disc pl-4 leading-relaxed">
+            <li>Full-stack engineer with 7+ years exp (from 🇪🇹 Ethiopia, living in 🇹🇼 Taiwan for 3 years)</li>
+            <li>Currently working at <strong>ASUS</strong> and member of software engineer co-op <strong>508.dev</strong></li>
+            <li>Creator of open-source <strong>Rails & React Native starter template</strong></li>
+          </ul>
 
           <div class="p-2 bg-emerald-950/60 border border-emerald-500/30 rounded-lg text-[11px] text-emerald-200 flex items-center justify-between gap-2">
             <span>💼 <strong>Hire Me:</strong> Senior/Staff Full-Stack & Mobile Roles</span>

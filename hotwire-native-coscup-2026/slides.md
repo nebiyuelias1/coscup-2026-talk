@@ -21,9 +21,13 @@ style: |
 
 <div class="flex flex-col items-center justify-center h-full px-4">
   
-  <div class="flex items-center gap-2 mb-4">
+  <div class="flex items-center gap-2 mb-4 flex-wrap justify-center">
     <span class="rails-badge">💎 Ruby on Rails</span>
     <span class="hotwire-badge">⚡ Hotwire Native</span>
+    <div class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-700 flex items-center gap-2">
+      <img src="/ruby_taiwan_logo.png" alt="Ruby Taiwan Logo" class="h-4 object-contain rounded-sm" />
+      <span>Ruby Taiwan 🇹🇼</span>
+    </div>
     <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-800 text-slate-300 border border-slate-700">
       COSCUP 2026
     </span>
@@ -63,22 +67,22 @@ layout: default
   <span class="text-xs font-mono text-slate-400">COSCUP 2026</span>
 </div>
 
-# Hi, I'm Nebiyu Elias Talefe 👋
+# Hi, I'm Neba 👋 🇪🇹
 
 <SpeakerCard />
 
 <div class="grid grid-cols-3 gap-3 mt-3 text-xs">
   <div class="p-3 bg-slate-900/70 rounded-xl border border-slate-800">
     <div class="text-red-400 font-bold text-sm mb-1">🚀 7+ Years Experience</div>
-    <p class="text-slate-300 m-0">Full-stack architect building scalable web systems and hybrid native mobile apps.</p>
+    <p class="text-slate-300 m-0">Full-stack engineer building web & mobile applications.</p>
   </div>
   <div class="p-3 bg-slate-900/70 rounded-xl border border-slate-800">
-    <div class="text-amber-400 font-bold text-sm mb-1">💎 Rails & Hotwire Specialist</div>
-    <p class="text-slate-300 m-0">Creator of Hotwire Native starter templates & production Rails multi-platform suites.</p>
+    <div class="text-amber-400 font-bold text-sm mb-1">🏢 Currently @ ASUS</div>
+    <p class="text-slate-300 m-0">Building modern web and mobile product experiences.</p>
   </div>
   <div class="p-3 bg-slate-900/70 rounded-xl border border-slate-800">
-    <div class="text-emerald-400 font-bold text-sm mb-1">💼 Open for Opportunities</div>
-    <p class="text-slate-300 m-0">Available for Senior/Lead Full-Stack roles, Rails consulting, and contract engineering.</p>
+    <div class="text-emerald-400 font-bold text-sm mb-1">🤝 Co-op @ 508.dev</div>
+    <p class="text-slate-300 m-0">Member of software engineer co-operative 508.dev.</p>
   </div>
 </div>
 

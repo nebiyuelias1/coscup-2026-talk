@@ -4,7 +4,7 @@ background: https://cover.sli.dev
 title: Building Native Mobile Apps Using Rails
 info: |
   ## Building Native Mobile Apps Using Rails
-  COSCUP 2026 Presentation by Nebiyu Elias Talefe
+  COSCUP 2026 Presentation by Neba
 class: text-center ruby-hero
 drawings:
   persist: false
@@ -21,9 +21,13 @@ style: |
 
 <div class="flex flex-col items-center justify-center h-auto my-auto px-4 py-2">
   
-  <div class="flex items-center gap-2 mb-4">
+  <div class="flex items-center gap-2 mb-4 flex-wrap justify-center">
     <span class="rails-badge">💎 Ruby on Rails</span>
     <span class="hotwire-badge">⚡ Hotwire Native</span>
+    <div class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-700 flex items-center gap-2">
+      <img src="/ruby_taiwan_logo.png" alt="Ruby Taiwan Logo" class="h-4 object-contain rounded-sm" />
+      <span>Ruby Taiwan 🇹🇼</span>
+    </div>
     <div class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-700 flex items-center gap-2">
       <img src="/coscup_logo.png" alt="COSCUP Logo" class="h-4 object-contain" />
       <span>2026</span>
@@ -38,14 +42,14 @@ style: |
   </h1>
 
   <p class="text-xl text-slate-300 max-w-2xl mx-auto font-medium mb-8">
-    How to ship production iOS & Android apps at 5x speed using Hotwire Native, Strada, and your existing Rails backend.
+      Ship iOS and Android from the app you already have — with Hotwire Native.
   </p>
 
   <div class="flex items-center justify-center gap-4 text-sm font-semibold">
     <div class="flex items-center gap-2 bg-slate-900/80 px-4 py-2 rounded-xl border border-red-500/30">
       <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
       <span class="text-white">Speaker:</span>
-      <span class="text-red-400 font-bold">Nebiyu Elias Talefe</span>
+      <span class="text-red-400 font-bold">Neba</span>
     </div>
     <div class="bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-700 text-slate-300 font-mono text-xs">
       Aug 8, 2026
@@ -55,37 +59,17 @@ style: |
 </div>
 
 ---
+
 transition: fade-out
 layout: default
+
 ---
-
-<div class="flex justify-between items-center mb-1">
-  <span class="rails-badge">👨‍💻 About The Speaker</span>
-  <span class="text-xs font-mono text-slate-400">COSCUP 2026</span>
-</div>
-
-<h2 class="text-2xl font-black text-white my-1">Hi, I'm Nebiyu Elias Talefe 👋</h2>
 
 <SpeakerCard />
 
-<div class="grid grid-cols-3 gap-2 mt-2 text-xs">
-  <div class="p-2 bg-slate-900/70 rounded-xl border border-slate-800">
-    <div class="text-red-400 font-bold text-xs mb-0.5">🚀 7+ Years Experience</div>
-    <p class="text-slate-300 m-0 text-[11px] leading-tight">Full-stack architect building scalable web systems & native apps.</p>
-  </div>
-  <div class="p-2 bg-slate-900/70 rounded-xl border border-slate-800">
-    <div class="text-amber-400 font-bold text-xs mb-0.5">💎 Rails & Hotwire Specialist</div>
-    <p class="text-slate-300 m-0 text-[11px] leading-tight">Creator of Hotwire Native starter templates & Rails suites.</p>
-  </div>
-  <div class="p-2 bg-slate-900/70 rounded-xl border border-slate-800">
-    <div class="text-emerald-400 font-bold text-xs mb-0.5">💼 Open for Opportunities</div>
-    <p class="text-slate-300 m-0 text-[11px] leading-tight">Available for Senior/Lead roles, consulting & contract work.</p>
-  </div>
-</div>
+---
 
----
-transition: slide-up
----
+## transition: slide-up
 
 <div class="flex justify-between items-center mb-2">
   <span class="rails-badge">⚠️ The Problem</span>
@@ -129,8 +113,8 @@ Traditional mobile app development forces small teams to choose between **massiv
 </div>
 
 ---
-transition: slide-left
----
+
+## transition: slide-left
 
 <div class="flex justify-between items-center mb-2">
   <span class="hotwire-badge">💡 The Solution</span>
@@ -182,8 +166,8 @@ Hotwire Native brings DHH & 37signals' battle-tested strategy (used in HEY & Bas
 </div>
 
 ---
-transition: fade-out
----
+
+## transition: fade-out
 
 <div class="flex justify-between items-center mb-2">
   <span class="hotwire-badge">📱 Interactive Demo</span>
@@ -214,6 +198,7 @@ transition: fade-out
         HTML attributes (`data-bridge-component`) trigger native Swift and Kotlin UI components.
       </p>
     </div>
+
   </div>
 
   <div>
@@ -222,8 +207,8 @@ transition: fade-out
 </div>
 
 ---
-transition: slide-up
----
+
+## transition: slide-up
 
 <div class="flex justify-between items-center mb-2">
   <span class="rails-badge">📐 Architecture</span>
@@ -260,8 +245,8 @@ graph TD
 ```
 
 ---
-transition: slide-left
----
+
+## transition: slide-left
 
 <div class="flex justify-between items-center mb-2">
   <span class="rails-badge">💻 Rails Code</span>
@@ -299,8 +284,8 @@ end
 </div>
 
 ---
-transition: slide-up
----
+
+## transition: slide-up
 
 <div class="flex justify-between items-center mb-2">
   <span class="hotwire-badge">⚙️ Config</span>
@@ -339,8 +324,8 @@ Control native iOS/Android navigation behavior **from your Rails server** dynami
 ```
 
 ---
-transition: slide-left
----
+
+## transition: slide-left
 
 <div class="flex justify-between items-center mb-2">
   <span class="rails-badge">🌉 Strada</span>
@@ -358,11 +343,11 @@ Strada bridges web HTML elements to native Swift (iOS) and Kotlin (Android) comp
   <div class="font-bold text-red-400 text-xs mb-1">HTML View (ERB)</div>
 
 ```html
-<form data-controller="bridge--form"
-      data-bridge--form-title-value="Save Post">
+<form data-controller="bridge--form" data-bridge--form-title-value="Save Post">
   <!-- Rails Form Fields -->
 </form>
 ```
+
 </div>
 
 <div>
@@ -374,12 +359,13 @@ class FormComponent: BridgeComponent {
   // Renders native iOS bar submit button!
 }
 ```
+
 </div>
 </div>
 
 ---
-transition: fade-out
----
+
+## transition: fade-out
 
 <div class="flex justify-between items-center mb-2">
   <span class="rails-badge">📊 Comparison</span>
@@ -395,8 +381,8 @@ transition: fade-out
 </div>
 
 ---
-transition: slide-up
----
+
+## transition: slide-up
 
 <div class="flex justify-between items-center mb-2">
   <span class="rails-badge">⭐ Starter Template</span>
@@ -445,8 +431,8 @@ bin/rails s
 ```
 
 ---
-transition: slide-left
----
+
+## transition: slide-left
 
 <div class="flex justify-between items-center mb-2">
   <span class="rails-badge">🎯 Best Practices</span>
@@ -488,16 +474,19 @@ transition: slide-left
 </div>
 
 ---
+
 transition: fade-out
 class: text-center ruby-hero
+
 ---
 
 <WrapUpSlide />
 
 ---
+
 transition: slide-up
 class: text-center ruby-hero
+
 ---
 
 <PortfolioTalksSlide />
-

@@ -45,7 +45,7 @@
             </div>
             <div>
               <h3 class="text-base font-black text-white m-0">
-                Nebiyu Elias Talefe Portfolio
+                Neba's Portfolio 🇪🇹
               </h3>
               <p class="text-xs text-red-400 font-semibold m-0 mt-0.5">
                 https://netale.et/#talks
