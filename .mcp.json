@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "local-mcp": {
+      "url": "http://localhost:3030/__mcp",
+      "type": "sse"
+    }
+  }
+}
