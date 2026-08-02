@@ -20,17 +20,14 @@ style: |
 ---
 
 <div class="flex flex-col items-center justify-center h-auto my-auto px-4 py-2">
-  
-  <div class="flex items-center gap-2 mb-4 flex-wrap justify-center">
-    <span class="rails-badge">💎 Ruby on Rails</span>
-    <span class="hotwire-badge">⚡ Hotwire Native</span>
-    <div class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-700 flex items-center gap-2">
-      <img src="/ruby_taiwan_logo.png" alt="Ruby Taiwan Logo" class="h-4 object-contain rounded-sm" />
-      <span>Ruby Taiwan 🇹🇼</span>
+  <div class="flex items-center gap-2.5 mb-4 flex-wrap justify-center">
+    <div class="title-chip">
+      <img src="/coscup_logo.png" alt="COSCUP Logo" class="h-3.5 object-contain" />
+      <span>COSCUP 2026</span>
     </div>
-    <div class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-700 flex items-center gap-2">
-      <img src="/coscup_logo.png" alt="COSCUP Logo" class="h-4 object-contain" />
-      <span>2026</span>
+    <div class="title-chip">
+      <img src="/ruby_taiwan_logo.png" alt="Ruby Taiwan Logo" class="h-3.5 object-contain rounded-sm" />
+      <span>Ruby Taiwan 🇹🇼</span>
     </div>
   </div>
 
@@ -45,14 +42,17 @@ style: |
       Ship iOS and Android from the app you already have — with Hotwire Native.
   </p>
 
-  <div class="flex items-center justify-center gap-4 text-sm font-semibold">
+  <div class="flex items-center justify-center gap-3 text-sm font-semibold flex-wrap">
     <div class="flex items-center gap-2 bg-slate-900/80 px-4 py-2 rounded-xl border border-red-500/30">
       <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
       <span class="text-white">Speaker:</span>
       <span class="text-red-400 font-bold">Neba</span>
     </div>
-    <div class="bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-700 text-slate-300 font-mono text-xs">
-      Aug 8, 2026
+    <div class="bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-700 text-slate-300 font-mono text-xs flex items-center gap-1.5">
+      <span>📅 Aug 8, 2026</span>
+    </div>
+    <div class="bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-700 text-slate-300 font-mono text-xs flex items-center gap-1.5">
+      <span>📍 NTUST, Taipei, Taiwan</span>
     </div>
   </div>
 
@@ -69,101 +69,30 @@ layout: default
 
 ---
 
-## transition: slide-up
-
-<div class="flex justify-between items-center mb-2">
-  <span class="rails-badge">⚠️ The Problem</span>
-  <span class="text-xs font-mono text-slate-400">Traditional Mobile Stacks</span>
-</div>
-
-# The Mobile Development Dilemma
-
-Traditional mobile app development forces small teams to choose between **massive overhead** or **subpar UX**:
-
-<div class="grid grid-cols-2 gap-4 mt-6">
-  
-  <div class="p-4 bg-slate-900/80 rounded-2xl border border-red-500/20 text-left">
-    <h3 class="text-lg font-bold text-red-400 flex items-center gap-2 mb-2">
-      <span>📱</span> Option A: Separate Native Apps
-    </h3>
-    <ul class="text-xs text-slate-300 space-y-2 pl-4 list-disc">
-      <li><strong>3 Codebases:</strong> Rails Backend + Swift (iOS) + Kotlin (Android).</li>
-      <li><strong>Tripled Team Size:</strong> Need specialized iOS and Android engineers.</li>
-      <li><strong>Duplicated Business Logic:</strong> Validations & state logic written 3 times.</li>
-      <li><strong>Slow Releases:</strong> App Store review queues for every single UI tweak.</li>
-    </ul>
-  </div>
-
-  <div class="p-4 bg-slate-900/80 rounded-2xl border border-amber-500/20 text-left">
-    <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2 mb-2">
-      <span>⚛️</span> Option B: React Native / Flutter
-    </h3>
-    <ul class="text-xs text-slate-300 space-y-2 pl-4 list-disc">
-      <li><strong>API Boundary Tax:</strong> Write JSON serializers, endpoints, and client state sync.</li>
-      <li><strong>Framework Layer Overhead:</strong> JS bridge friction and custom native module bugs.</li>
-      <li><strong>Duplicated Auth & State:</strong> Redux/Zustand mirroring server database state.</li>
-      <li><strong>Maintenance Burden:</strong> Constant dependency upgrades and breaking changes.</li>
-    </ul>
-  </div>
-
-</div>
-
-<div class="mt-6 p-3 bg-red-950/30 rounded-xl border border-red-500/40 text-center font-bold text-sm text-red-300">
-  ❓ What if your single Rails backend COULD BE your iOS and Android mobile app?
-</div>
+transition: slide-up
+layout: default
 
 ---
 
-## transition: slide-left
+<MobileRequirementSlide />
 
-<div class="flex justify-between items-center mb-2">
-  <span class="hotwire-badge">💡 The Solution</span>
-  <span class="text-xs font-mono text-slate-400">HTML Over The Wire</span>
-</div>
+---
 
-# Enter Hotwire Native ⚡
+transition: slide-up
+layout: default
 
-Hotwire Native brings DHH & 37signals' battle-tested strategy (used in HEY & Basecamp) to your app.
+---
 
-<div class="grid grid-cols-3 gap-4 mt-6 text-left">
-  
-  <div class="p-4 bg-slate-900/90 rounded-2xl border border-blue-500/30">
-    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 font-bold flex items-center justify-center text-xl mb-3">
-      🌐
-    </div>
-    <h3 class="text-base font-bold text-white mb-1">Server-Driven HTML</h3>
-    <p class="text-xs text-slate-300 leading-relaxed m-0">
-      Your Rails views render standard HTML. Hotwire Native displays it instantly inside native WebView wrappers.
-    </p>
-  </div>
+<AlternativesSlide />
 
-  <div class="p-4 bg-slate-900/90 rounded-2xl border border-red-500/30">
-    <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-400 font-bold flex items-center justify-center text-xl mb-3">
-      📱
-    </div>
-    <h3 class="text-base font-bold text-white mb-1">Native Navigation Shell</h3>
-    <p class="text-xs text-slate-300 leading-relaxed m-0">
-      Links push real iOS `UINavigationController` and Android activities onto the screen stack.
-    </p>
-  </div>
+---
 
-  <div class="p-4 bg-slate-900/90 rounded-2xl border border-purple-500/30">
-    <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 font-bold flex items-center justify-center text-xl mb-3">
-      🌉
-    </div>
-    <h3 class="text-base font-bold text-white mb-1">Strada Native Bridge</h3>
-    <p class="text-xs text-slate-300 leading-relaxed m-0">
-      Connect web HTML components directly to native Swift/Kotlin components (Camera, Haptics, Sheets).
-    </p>
-  </div>
+transition: slide-left
+layout: default
 
-</div>
+---
 
-<div class="mt-6 flex items-center justify-center gap-6 text-xs text-slate-300 bg-slate-950 p-3 rounded-xl border border-slate-800">
-  <span class="flex items-center gap-1 font-bold text-emerald-400">✅ 90%+ Code Reuse</span>
-  <span class="flex items-center gap-1 font-bold text-blue-400">⚡ Instant Server Deploys</span>
-  <span class="flex items-center gap-1 font-bold text-purple-400">🚀 1 Small Rails Team</span>
-</div>
+<HotwireNativeIntroSlide />
 
 ---
 

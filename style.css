@@ -80,15 +80,20 @@ h3 {
   border: 1px solid rgba(157, 78, 221, 0.4);
 }
 
-/* Custom Badge */
-.rails-badge {
+/* Custom Badges & Chips */
+.rails-badge, .hotwire-badge, .title-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.35rem 0.85rem;
+  height: 2.125rem;
+  padding: 0 0.85rem;
   border-radius: 9999px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
+  box-sizing: border-box;
+}
+
+.rails-badge {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   background: linear-gradient(135deg, rgba(204, 0, 0, 0.2), rgba(128, 0, 0, 0.4));
@@ -97,18 +102,18 @@ h3 {
 }
 
 .hotwire-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 0.85rem;
-  border-radius: 9999px;
-  font-size: 0.85rem;
-  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   background: linear-gradient(135deg, rgba(54, 130, 246, 0.2), rgba(30, 58, 138, 0.4));
   color: #60A5FA;
   border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.title-chip {
+  background: #0F172A;
+  color: #CBD5E1;
+  border: 1px solid #334155;
+  font-family: 'Fira Code', monospace !important;
 }
 
 /* Slide Card Containers */

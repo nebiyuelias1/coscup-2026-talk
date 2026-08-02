@@ -30,9 +30,10 @@
               <img src="/nebiyu.png" alt="Nebiyu Elias Talefe" class="w-full h-full object-cover object-top rounded-[10px]" />
             </div>
             <div>
-              <h3 class="text-base font-black text-white m-0 flex items-center gap-2">
+              <h3 class="text-base font-black text-white m-0 flex items-center gap-2 flex-wrap">
                 Neba 🇪🇹
                 <span class="text-[9px] bg-red-950 text-red-300 px-1.5 py-0.5 rounded border border-red-800 font-mono">Speaker</span>
+                <span class="text-[9px] bg-cyan-950 text-cyan-300 px-1.5 py-0.5 rounded border border-cyan-800 font-mono">I use omarchy btw 🐧</span>
               </h3>
               <p class="text-xs text-red-400 font-semibold m-0 mt-0.5">
                 Full-Stack Engineer (7+ Years Exp) • 🇪🇹 Ethiopia • ASUS • 508.dev
@@ -43,7 +44,9 @@
           <ul class="text-xs text-slate-300 space-y-1 list-disc pl-4 leading-relaxed">
             <li>Full-stack engineer with 7+ years exp (from 🇪🇹 Ethiopia, living in 🇹🇼 Taiwan for 3 years)</li>
             <li>Currently working at <strong>ASUS</strong> and member of software engineer co-op <strong>508.dev</strong></li>
+            <li>Shipped Hotwire Native apps on iOS/Android & currently building a new app with Rails + Hotwire Native</li>
             <li>Creator of open-source <strong>Rails & React Native starter template</strong></li>
+            <li>I use <strong>omarchy</strong> btw 🐧</li>
           </ul>
 
           <div class="p-2 bg-emerald-950/60 border border-emerald-500/30 rounded-lg text-[11px] text-emerald-200 flex items-center justify-between gap-2">

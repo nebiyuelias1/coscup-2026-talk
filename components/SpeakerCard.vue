@@ -36,16 +36,16 @@
         <div
           class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/80 pb-2"
         >
-          <div>
+          <div class="flex items-center gap-3 flex-wrap">
             <h3
               class="text-xl font-black text-white tracking-tight m-0 flex items-center gap-2"
             >
-              哈羅👋, 我是Neba
+              哈羅👋, 我是 Neba
             </h3>
           </div>
         </div>
 
-        <!-- 4 Highlight Cards Grid (2x2 layout on medium screens) -->
+        <!-- Highlight Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
           <!-- Card 1: 7+ Years Exp -->
           <div
@@ -91,18 +91,38 @@
             </p>
           </div>
 
-          <!-- Card 4: Shipped Hotwire Native Apps -->
+          <!-- Card 4: Shipped & Currently Building Hotwire Native Apps -->
           <div
             class="p-2.5 bg-slate-950/70 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-colors shadow-sm"
           >
             <div
               class="text-purple-400 font-bold text-xs mb-0.5 flex items-center gap-1.5"
             >
-              <span>📱</span> Shipped on iOS & Android
+              <span>📱</span> Shipped & Building on Mobile
             </div>
             <p class="text-slate-300 m-0 text-[11px] leading-tight">
-              Shipped an app on iOS and Android using Hotwire Native.
+              Shipped Hotwire Native apps on iOS & Android — currently building my next app with Rails & Hotwire Native.
             </p>
+          </div>
+
+          <!-- Card 5: Omarchy OS -->
+          <div
+            class="p-2.5 bg-slate-950/70 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-colors shadow-sm md:col-span-2 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="text-cyan-400 font-bold text-xs flex items-center gap-1.5"
+              >
+                <span>🐧</span> OS & Environment:
+              </span>
+              <span class="text-slate-200 text-[11px] font-mono font-bold"
+                >I use omarchy btw</span
+              >
+            </div>
+            <span
+              class="text-[10px] font-mono text-cyan-300 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800/80"
+              >Arch Linux</span
+            >
           </div>
         </div>
 
