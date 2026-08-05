@@ -9,7 +9,7 @@
     <h2 class="text-2xl font-black tracking-tight text-white mb-2 text-left flex items-center justify-between">
       <span>Monorepo Setup: <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-blue-400">Rails + iOS + Android 📦</span></span>
       
-      <!-- Interactive Project Selector Pills -->
+      <!-- Project Tab Selector Buttons -->
       <div class="flex items-center gap-1.5 font-mono text-xs">
         <button 
           @click="activeTab = 'backend'"
@@ -31,10 +31,10 @@
       </div>
     </h2>
 
-    <!-- 2 Column Grid Layout: Left Interactive Monorepo Tree, Right Project Detail View -->
+    <!-- 2 Column Grid Layout: Left Root Monorepo Tree, Right Detailed Project Structure & Code -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
       
-      <!-- Left Column: Interactive Monorepo Directory Tree (Cols 1-5) -->
+      <!-- Left Column: Monorepo Root Directory Tree (Cols 1-5) -->
       <div class="md:col-span-5 text-left">
         <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 shadow-2xl font-mono text-xs text-slate-300 space-y-2">
           <div class="flex items-center justify-between border-b border-slate-800 pb-2 text-[11px] text-slate-400">
@@ -42,34 +42,28 @@
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
               arif-nibaboch/
             </span>
-            <span class="text-[10px] bg-slate-900 px-2 py-0.5 rounded text-amber-300">LitLoop Repo</span>
+            <span class="text-[10px] bg-slate-900 px-2 py-0.5 rounded text-amber-300">Root Directory</span>
           </div>
 
-          <!-- Directory Tree (Clickable Folders) -->
+          <!-- Directory Tree Folders -->
           <div class="space-y-2 text-[11px]">
             
-            <!-- 1. Backend Folder -->
+            <!-- Backend Folder Item -->
             <div 
               @click="activeTab = 'backend'"
               :class="[
-                'p-2 rounded border transition-all cursor-pointer space-y-1',
+                'p-2 rounded border transition-all cursor-pointer flex items-center justify-between',
                 activeTab === 'backend' 
                   ? 'bg-red-950/50 border-red-500 ring-1 ring-red-500/50 shadow-lg translate-x-1' 
                   : 'bg-slate-900/60 border-slate-800/80 opacity-70 hover:opacity-100'
               ]">
-              <div class="text-red-400 font-bold flex items-center justify-between">
+              <div class="text-red-400 font-bold flex items-center gap-1.5">
                 <span>💎 backend/</span>
-                <span class="text-[9px] bg-red-900/60 px-1.5 py-0.5 rounded text-red-200">Rails Monolith</span>
               </div>
-              <div class="pl-3 text-slate-400 text-[10px] space-y-0.5">
-                <div>└── app/controllers/</div>
-                <div class="text-amber-300 font-bold bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-800/60">
-                  └── configurations_controller.rb ⚡
-                </div>
-              </div>
+              <span class="text-[9px] bg-red-900/60 px-1.5 py-0.5 rounded text-red-200 font-mono">Rails App</span>
             </div>
 
-            <!-- 2. iOS Folder -->
+            <!-- iOS Folder Item -->
             <div 
               @click="activeTab = 'ios'"
               :class="[
@@ -81,10 +75,10 @@
               <div class="text-blue-400 font-bold flex items-center gap-1.5">
                 <span>🍏 ios/</span>
               </div>
-              <span class="text-[9px] text-blue-300 font-mono">LitLoop.xcodeproj</span>
+              <span class="text-[9px] bg-blue-900/60 px-1.5 py-0.5 rounded text-blue-200 font-mono">Swift App</span>
             </div>
 
-            <!-- 3. Android Folder -->
+            <!-- Android Folder Item -->
             <div 
               @click="activeTab = 'android'"
               :class="[
@@ -96,95 +90,91 @@
               <div class="text-emerald-400 font-bold flex items-center gap-1.5">
                 <span>🤖 android/</span>
               </div>
-              <span class="text-[9px] text-emerald-300 font-mono">et.netale.litloop</span>
+              <span class="text-[9px] bg-emerald-900/60 px-1.5 py-0.5 rounded text-emerald-200 font-mono">Kotlin App</span>
             </div>
 
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Dynamic Project Code & Details View (Cols 6-12) -->
+      <!-- Right Column: Project Structure Details & Key Code (Cols 6-12) -->
       <div class="md:col-span-7 text-left space-y-1.5">
         
-        <!-- BACKEND DETAILS TAB -->
+        <!-- BACKEND STRUCTURE TAB -->
         <div v-if="activeTab === 'backend'" class="space-y-1.5 animate-fade-in">
           <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 px-1">
-            <span class="text-amber-400 font-bold">backend/app/controllers/configurations_controller.rb</span>
-            <span class="bg-red-950 text-red-300 px-2 py-0.5 rounded text-[10px] border border-red-800 font-bold">Rails Backend</span>
+            <span class="text-red-400 font-bold">backend/ — Rails Monolith Structure</span>
+            <span class="bg-red-950 text-red-300 px-2 py-0.5 rounded text-[10px] border border-red-800 font-bold">Rails 8</span>
           </div>
 
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 shadow-2xl font-mono text-[10.5px] text-amber-300 overflow-x-auto leading-relaxed h-[240px]">
-            <div class="text-purple-400">class <span class="text-amber-300">ConfigurationsController</span> &lt; <span class="text-blue-300">ApplicationController</span></div>
-            <div class="pl-4 text-purple-400">def <span class="text-blue-300">ios_v1</span></div>
-            <div class="pl-8 text-slate-300">render <span class="text-emerald-400">json:</span> { rules: [{ patterns: [<span class="text-emerald-300">"/new$"</span>, <span class="text-emerald-300">"/edit$"</span>], properties: { context: <span class="text-emerald-300">"modal"</span> } }] }</div>
-            <div class="pl-4 text-purple-400">end</div>
-            <br/>
-            <div class="pl-4 text-purple-400">def <span class="text-blue-300">android_v1</span></div>
-            <div class="pl-8 text-slate-300">render <span class="text-emerald-400">json:</span> {</div>
-            <div class="pl-12 text-slate-300">rules: [</div>
-            <div class="pl-16 text-slate-400">{ patterns: [<span class="text-emerald-300">".*"</span>], properties: { uri: <span class="text-emerald-300">"hotwire://fragment/web"</span>, pull_to_refresh_enabled: <span class="text-purple-400">true</span> } },</div>
-            <div class="pl-16 text-slate-400">{ patterns: [<span class="text-emerald-300">"/new$"</span>, <span class="text-emerald-300">"/edit$"</span>], properties: { context: <span class="text-emerald-300">"modal"</span> } }</div>
-            <div class="pl-12 text-slate-300">]</div>
-            <div class="pl-8 text-slate-300">}</div>
-            <div class="pl-4 text-purple-400">end</div>
-            <div class="text-purple-400">end</div>
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 shadow-2xl font-mono text-[11px] text-slate-300 overflow-x-auto h-[240px] flex flex-col justify-between">
+            <div class="space-y-1 text-slate-300">
+              <div class="text-red-400 font-bold">backend/</div>
+              <div class="pl-3 text-slate-400">├── app/</div>
+              <div class="pl-6 text-slate-400">├── controllers/</div>
+              <div class="pl-9 text-amber-300 font-bold bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-800/60 inline-block">
+                └── configurations_controller.rb ⚡ (Serves Path Config JSON)
+              </div>
+              <div class="pl-6 text-slate-400">└── views/ (Renders HTML for Web & Mobile)</div>
+              <div class="pl-3 text-slate-400">├── config/routes.rb</div>
+              <div class="pl-3 text-slate-400">└── Gemfile</div>
+            </div>
+
+            <div class="p-2 bg-slate-900 border border-slate-800 rounded text-[10px] text-amber-300">
+              <code>get "/configurations/ios_v1", to: "configurations#ios_v1"</code>
+            </div>
           </div>
         </div>
 
-        <!-- IOS DETAILS TAB -->
+        <!-- IOS STRUCTURE TAB -->
         <div v-if="activeTab === 'ios'" class="space-y-1.5 animate-fade-in">
           <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 px-1">
-            <span class="text-blue-400 font-bold">ios/App/Delegates/SceneDelegate.swift</span>
-            <span class="bg-blue-950 text-blue-300 px-2 py-0.5 rounded text-[10px] border border-blue-800 font-bold">iOS Swift</span>
+            <span class="text-blue-400 font-bold">ios/ — Swift Xcode Project Structure</span>
+            <span class="bg-blue-950 text-blue-300 px-2 py-0.5 rounded text-[10px] border border-blue-800 font-bold">iOS / Swift</span>
           </div>
 
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 shadow-2xl font-mono text-[10.5px] text-slate-300 overflow-x-auto leading-relaxed h-[240px]">
-            <div><span class="text-purple-400">import</span> <span class="text-amber-300">HotwireNative</span></div>
-            <div><span class="text-purple-400">import</span> <span class="text-blue-300">UIKit</span></div>
-            <br/>
-            <div><span class="text-purple-400">let</span> baseURL = <span class="text-amber-300">URL</span>(string: <span class="text-emerald-300">"https://litloop.club/"</span>)!</div>
-            <br/>
-            <div><span class="text-purple-400">class</span> <span class="text-amber-300">SceneDelegate</span>: <span class="text-blue-300">UIResponder</span>, <span class="text-blue-300">UIWindowSceneDelegate</span> {</div>
-            <div class="pl-4 text-slate-400"><span class="text-purple-400">var</span> window: <span class="text-blue-300">UIWindow</span>?</div>
-            <div class="pl-4 text-purple-400">private let <span class="text-slate-200">navigator</span> = <span class="text-amber-300">Navigator</span>(configuration: .init(</div>
-            <div class="pl-8 text-slate-300">name: <span class="text-emerald-300">"main"</span>,</div>
-            <div class="pl-8 text-emerald-400">startLocation: baseURL.appending(path: <span class="text-emerald-300">"/"</span>)</div>
-            <div class="pl-4 text-purple-400">))</div>
-            <br/>
-            <div class="pl-4 text-purple-400">func <span class="text-blue-300">scene</span>(_ scene: <span class="text-blue-300">UIScene</span>, willConnectTo...) {</div>
-            <div class="pl-8 text-slate-300">window?.rootViewController = navigator.rootViewController</div>
-            <div class="pl-8 text-emerald-400">navigator.route(baseURL)</div>
-            <div class="pl-4 text-purple-400">}</div>
-            <div>}</div>
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 shadow-2xl font-mono text-[11px] text-slate-300 overflow-x-auto h-[240px] flex flex-col justify-between">
+            <div class="space-y-1 text-slate-300">
+              <div class="text-blue-400 font-bold">ios/</div>
+              <div class="pl-3 text-slate-400">├── LitLoop.xcodeproj</div>
+              <div class="pl-3 text-slate-400">└── App/</div>
+              <div class="pl-6 text-slate-400">├── Delegates/</div>
+              <div class="pl-9 text-blue-300 font-bold bg-blue-950/60 px-1.5 py-0.5 rounded border border-blue-800/60 inline-block">
+                ├── SceneDelegate.swift ⚡ (Hotwire Navigator Entry)
+                <div>└── AppDelegate.swift</div>
+              </div>
+              <div class="pl-6 text-slate-400">└── Resources/</div>
+              <div class="pl-9 text-slate-400">└── path_configuration.json</div>
+            </div>
+
+            <div class="p-2 bg-slate-900 border border-slate-800 rounded text-[10px] text-blue-300">
+              <code>Navigator(configuration: .init(name: "main", startLocation: baseURL))</code>
+            </div>
           </div>
         </div>
 
-        <!-- ANDROID DETAILS TAB -->
+        <!-- ANDROID STRUCTURE TAB -->
         <div v-if="activeTab === 'android'" class="space-y-1.5 animate-fade-in">
           <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 px-1">
-            <span class="text-emerald-400 font-bold">android/app/.../et/netale/litloop/MainActivity.kt</span>
-            <span class="bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded text-[10px] border border-emerald-800 font-bold">Android Kotlin</span>
+            <span class="text-emerald-400 font-bold">android/ — Kotlin Gradle Project Structure</span>
+            <span class="bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded text-[10px] border border-emerald-800 font-bold">Android / Kotlin</span>
           </div>
 
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 shadow-2xl font-mono text-[10.5px] text-slate-300 overflow-x-auto leading-relaxed h-[240px]">
-            <div><span class="text-purple-400">package</span> <span class="text-emerald-300">et.netale.litloop</span></div>
-            <br/>
-            <div><span class="text-purple-400">import</span> <span class="text-amber-300">dev.hotwire.navigation.activities.HotwireActivity</span></div>
-            <div><span class="text-purple-400">import</span> <span class="text-amber-300">dev.hotwire.navigation.navigator.NavigatorConfiguration</span></div>
-            <br/>
-            <div><span class="text-purple-400">const val</span> baseURL = <span class="text-emerald-300">"https://litloop.club"</span></div>
-            <br/>
-            <div><span class="text-purple-400">class</span> <span class="text-amber-300">MainActivity</span> : <span class="text-emerald-300">HotwireActivity</span>() {</div>
-            <div class="pl-4 text-purple-400">override fun <span class="text-blue-300">navigatorConfigurations</span>(): List&lt;NavigatorConfiguration&gt; {</div>
-            <div class="pl-8 text-purple-400">return <span class="text-slate-200">listOf</span>(</div>
-            <div class="pl-12 text-amber-300">NavigatorConfiguration(</div>
-            <div class="pl-16 text-slate-300">name = <span class="text-emerald-300">"main"</span>,</div>
-            <div class="pl-16 text-emerald-400">startLocation = <span class="text-emerald-300">"$baseURL/users/sign_in"</span>,</div>
-            <div class="pl-16 text-slate-300">navigatorHostId = <span class="text-blue-300">R.id.main</span></div>
-            <div class="pl-12 text-amber-300">)</div>
-            <div class="pl-8 text-slate-300">)</div>
-            <div class="pl-4 text-purple-400">}</div>
-            <div>}</div>
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 shadow-2xl font-mono text-[11px] text-slate-300 overflow-x-auto h-[240px] flex flex-col justify-between">
+            <div class="space-y-1 text-slate-300">
+              <div class="text-emerald-400 font-bold">android/</div>
+              <div class="pl-3 text-slate-400">├── build.gradle.kts</div>
+              <div class="pl-3 text-slate-400">└── app/</div>
+              <div class="pl-6 text-slate-400">├── build.gradle.kts (dep: dev.hotwire:native)</div>
+              <div class="pl-6 text-slate-400">└── src/main/java/et/netale/litloop/</div>
+              <div class="pl-9 text-emerald-300 font-bold bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-800/60 inline-block">
+                └── MainActivity.kt ⚡ (HotwireActivity subclass)
+              </div>
+            </div>
+
+            <div class="p-2 bg-slate-900 border border-slate-800 rounded text-[10px] text-emerald-300">
+              <code>class MainActivity : HotwireActivity() // startLocation = "https://litloop.club"</code>
+            </div>
           </div>
         </div>
 
@@ -196,13 +186,13 @@
     <div class="mt-3 p-2.5 bg-slate-950 border border-slate-800 rounded-xl text-left flex items-center justify-between text-xs">
       <span class="text-slate-300">
         <template v-if="activeTab === 'backend'">
-          💡 <strong>Rails Path Config:</strong> Serves navigation rules (<code class="text-amber-300">/configurations/ios_v1</code>) directly to both clients.
+          💎 <strong>Rails Backend:</strong> Houses models, controllers & ERB views + serves dynamic navigation rules for mobile.
         </template>
         <template v-if="activeTab === 'ios'">
-          🍏 <strong>iOS Client:</strong> Swift <code class="text-blue-300">SceneDelegate</code> binds Hotwire <code class="text-blue-300">Navigator</code> to <code class="text-blue-300">https://litloop.club</code>.
+          🍏 <strong>iOS Project:</strong> Xcode project inside <code class="text-blue-300">/ios</code> folder with Swift <code class="text-blue-300">SceneDelegate</code> entry.
         </template>
         <template v-if="activeTab === 'android'">
-          🤖 <strong>Android Client:</strong> Kotlin <code class="text-emerald-300">MainActivity</code> extends <code class="text-emerald-300">HotwireActivity</code> to manage fragment backstack.
+          🤖 <strong>Android Project:</strong> Gradle project inside <code class="text-emerald-300">/android</code> folder extending <code class="text-emerald-300">HotwireActivity</code>.
         </template>
       </span>
 

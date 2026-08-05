@@ -183,6 +183,13 @@ transition: slide-left
 layout: default
 ---
 
+<CrossPlatformResultSlide />
+
+---
+transition: slide-left
+layout: default
+---
+
 <HotwireInteractionSlide />
 
 ---
