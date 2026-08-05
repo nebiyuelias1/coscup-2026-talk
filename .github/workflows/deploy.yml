@@ -42,13 +42,13 @@ jobs:
         run: pnpm install
 
       - name: Install Playwright Chromium for PDF Export
-        run: pnpm exec playwright install chromium --with-deps
+        run: npx playwright install chromium --with-deps
 
       - name: Build Slidev Web App
         run: pnpm run build
 
       - name: Export Presentation to PDF
-        run: pnpm exec slidev export --output ./dist/slides.pdf
+        run: pnpm run export --output ./dist/slides.pdf
 
       - name: Upload PDF Artifact for Release Download
         uses: actions/upload-artifact@v4
