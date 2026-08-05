@@ -24,9 +24,9 @@ style: |
   <div class="flex items-center gap-2.5 mb-4 flex-wrap justify-center">
     <span class="rails-badge">💎 Ruby on Rails</span>
     <span class="hotwire-badge">⚡ Hotwire Native</span>
-    <div class="title-chip">
-      <img src="/ruby_taiwan_logo.png" alt="Ruby Taiwan Logo" class="h-3.5 object-contain rounded-sm" />
-      <span>Ruby Taiwan 🇹🇼</span>
+    <div class="title-chip flex items-center gap-1.5">
+      <img src="/ruby_taiwan_logo.svg" alt="Ruby Taiwan Logo" class="h-4.5 object-contain" />
+      <img src="/ruby_taiwan_logotype.svg" alt="Ruby Taiwan" class="h-3.5 object-contain filter invert brightness-200" />
     </div>
     <div class="title-chip">
       <img src="/coscup_logo.png" alt="COSCUP Logo" class="h-3.5 object-contain" />
