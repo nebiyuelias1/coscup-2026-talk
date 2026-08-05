@@ -83,7 +83,61 @@ layout: default
 
 ---
 
-<AlternativesSlide />
+<AlternativesSlide approach="pwa" />
+
+---
+
+transition: slide-up
+layout: default
+
+---
+
+<AlternativesSlide approach="react-native" />
+
+---
+
+transition: slide-up
+layout: default
+
+---
+
+<ReactNativeCaseStudySlide />
+
+---
+
+transition: slide-up
+layout: default
+
+---
+
+<AlternativesSlide approach="native" />
+
+---
+
+transition: slide-up
+layout: default
+
+---
+
+<SmallTeamIdeaSlide />
+
+---
+
+transition: slide-up
+layout: default
+
+---
+
+<WebviewMythsSlide />
+
+---
+
+transition: slide-up
+layout: default
+
+---
+
+<RailsContrarianSlide />
 
 ---
 
@@ -93,6 +147,42 @@ layout: default
 ---
 
 <HotwireNativeIntroSlide />
+
+---
+
+transition: slide-left
+layout: default
+
+---
+
+<MonorepoSetupSlide />
+
+---
+
+transition: slide-left
+layout: default
+
+---
+
+<HotwireIosSetupSlide />
+
+---
+
+transition: slide-left
+layout: default
+
+---
+
+<HotwireAndroidSetupSlide />
+
+---
+
+transition: slide-left
+layout: default
+
+---
+
+<HotwireInteractionSlide />
 
 ---
 
