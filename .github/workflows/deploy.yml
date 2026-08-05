@@ -39,7 +39,7 @@ jobs:
           node-version: 22
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Install Playwright Chromium for PDF Export
         run: npx playwright install chromium --with-deps
