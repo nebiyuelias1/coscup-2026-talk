@@ -7,7 +7,7 @@
     </div>
 
     <h2 class="text-2xl font-black tracking-tight text-white mb-2 text-left flex items-center justify-between">
-      <span>Monorepo Setup: <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-blue-400">Rails + iOS + Android 📦</span></span>
+      <span>Monorepo Setup: <span class="text-red-500">Rails + iOS + Android 📦</span></span>
       
       <!-- Project Tab Selector Buttons -->
       <div class="flex items-center gap-1.5 font-mono text-xs">

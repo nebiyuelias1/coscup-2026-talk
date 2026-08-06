@@ -2,7 +2,7 @@
   <div class="hotwire-detection-slide w-full my-auto flex flex-col justify-center">
     <!-- Header -->
     <h2 class="text-2xl font-black tracking-tight text-white mb-4 text-left">
-      Detecting Native vs Web: <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-blue-400">hotwire_native_app? ⚡</span>
+      Detecting Native vs Web: <span class="text-red-500">hotwire_native_app? ⚡</span>
     </h2>
 
     <!-- 2 Column Grid Layout: Left Explanations, Right Code Snippet -->

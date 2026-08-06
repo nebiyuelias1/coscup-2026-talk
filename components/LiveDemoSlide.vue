@@ -9,7 +9,7 @@
 
     <!-- Massive Punchy Title -->
     <h1 class="text-6xl font-black tracking-tight text-white mb-4">
-      Demo Time <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-emerald-400">⚡</span>
+      Demo Time <span class="text-red-500">⚡</span>
     </h1>
 
     <p class="text-lg text-slate-300 font-medium max-w-lg mx-auto">

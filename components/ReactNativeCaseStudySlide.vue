@@ -7,7 +7,7 @@
     </div>
 
     <h2 class="text-2xl font-black tracking-tight text-white mb-4 text-left">
-      Real Story: <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-red-500">The React Native API Tax ⚡</span>
+      Real Story: <span class="text-red-500">The React Native API Tax ⚡</span>
     </h2>
 
     <!-- 2 Column Layout: Left Image Mockup, Right 2 Simple Points -->

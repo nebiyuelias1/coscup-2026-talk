@@ -2,7 +2,7 @@
   <div class="tailwind-native-hiding-slide w-full my-auto flex flex-col justify-center">
     <!-- Header with Stepper Controls -->
     <h2 class="text-2xl font-black tracking-tight text-white mb-3 text-left flex items-center justify-between">
-      <span>Hiding Web Navbars: <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-blue-400">hotwire-native:hidden 🎨</span></span>
+      <span>Hiding Web Navbars: <span class="text-red-500">hotwire-native:hidden 🎨</span></span>
       
       <!-- Stepper Buttons -->
       <div class="flex items-center gap-1.5 font-mono text-xs">

@@ -7,7 +7,7 @@
     </div>
 
     <h2 class="text-3xl font-black tracking-tight text-white mb-3 text-left">
-      But Wait... We're a <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-red-400">Small Team! 🚀</span>
+      But Wait... We're a <span class="text-red-500">Small Team! 🚀</span>
     </h2>
 
     <p class="text-sm text-slate-300 text-left mb-5">

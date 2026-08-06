@@ -7,7 +7,7 @@
     </div>
 
     <h2 class="text-2xl font-black tracking-tight text-white mb-3 text-left">
-      Why Mobile Apps Are <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-red-500">Required</span> for Your Product
+      Why Mobile Apps Are <span class="text-red-500">Required</span> for Your Product
     </h2>
 
     <!-- Visual Journey Flow Diagram -->

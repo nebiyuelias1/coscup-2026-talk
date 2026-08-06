@@ -7,7 +7,7 @@
     </div>
 
     <h2 class="text-2xl font-black tracking-tight text-white mb-3 text-left flex items-center justify-between">
-      <span>Embrace Being <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-red-500">Contrarian 🎯</span></span>
+      <span>Embrace Being <span class="text-red-500">Contrarian 🎯</span></span>
       <span class="text-xs font-mono text-amber-300 bg-amber-950/80 px-2.5 py-1 rounded border border-amber-500/40">
         Simplicity > Hype ⚡
       </span>

@@ -7,7 +7,7 @@
     </div>
 
     <h2 class="text-3xl font-black tracking-tight text-white mb-5 text-left">
-      Enter <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-300 to-red-400">Hotwire Native ⚡</span>
+      Enter <span class="text-red-500">Hotwire Native ⚡</span>
     </h2>
 
     <!-- 3 Simple Punchy Cards -->

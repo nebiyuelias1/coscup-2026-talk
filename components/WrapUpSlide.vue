@@ -10,7 +10,7 @@
 
     <h1 class="text-4xl font-black mb-2">
       Build Faster. Maintain Less. <br />
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-400 to-red-400">
+      <span class="text-red-500">
         Ship Mobile Apps with Rails.
       </span>
     </h1>

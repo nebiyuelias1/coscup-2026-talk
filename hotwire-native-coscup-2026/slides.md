@@ -36,7 +36,7 @@ style: |
 
   <h1 class="text-5xl font-extrabold tracking-tight mb-4">
     Building Native Mobile Apps<br>
-    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-400 to-red-400">
+    <span class="text-red-500">
       Using Rails
     </span>
   </h1>

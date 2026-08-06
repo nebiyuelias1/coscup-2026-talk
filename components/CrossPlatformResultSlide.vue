@@ -7,7 +7,7 @@
       <h2 class="text-xl font-black tracking-tight text-white m-0 text-left">
         The Result:
         <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-blue-400"
+          class="text-red-500"
           >Native + HTML hybrid</span
         >
       </h2>

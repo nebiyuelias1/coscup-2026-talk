@@ -7,7 +7,7 @@
     </div>
 
     <h2 class="text-3xl font-black tracking-tight text-white mb-4 text-center">
-      Then The "Cool Kids" <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-red-400">Speak Up... 🙄</span>
+      Then The "Cool Kids" <span class="text-red-500">Speak Up... 🙄</span>
     </h2>
 
     <!-- Centered Hero Image Frame with Overlays -->

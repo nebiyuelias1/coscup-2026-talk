@@ -188,7 +188,7 @@
       </div>
 
       <h2 class="text-2xl font-black tracking-tight text-white mb-4 text-left">
-        Alternative Mobile Approaches & <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-red-500">Their Limitations</span>
+        Alternative Mobile Approaches & <span class="text-red-500">Their Limitations</span>
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
