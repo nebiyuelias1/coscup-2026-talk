@@ -1,0 +1,1 @@
+var e=`/nebiyu.png`;export{e as t};

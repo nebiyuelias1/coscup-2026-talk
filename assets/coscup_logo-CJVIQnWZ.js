@@ -1,0 +1,1 @@
+var e=`/coscup_logo.png`;export{e as t};
