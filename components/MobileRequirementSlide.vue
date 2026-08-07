@@ -1,106 +1,84 @@
 <template>
-  <div class="mobile-requirement-slide w-full my-auto flex flex-col justify-center">
-    <!-- Header -->
+  <div class="mobile-requirement-slide w-full my-auto flex flex-col justify-center text-left">
+    
+    <!-- Header Badge -->
     <div class="flex justify-between items-center mb-2">
-      <span class="rails-badge">📱 Product Reality</span>
-      <span class="text-xs font-mono text-slate-400">User Expectation & Growth</span>
+      <span class="rails-badge font-bold">📊 Market Reality</span>
+      <span class="text-xs font-mono text-slate-400">By The Numbers</span>
     </div>
 
-    <h2 class="text-2xl font-black tracking-tight text-white mb-3 text-left">
-      Why Mobile Apps Are <span class="text-red-500">Required</span> for Your Product
+    <!-- Main Title -->
+    <h2 class="text-3xl font-black tracking-tight text-white mb-5">
+      Why Mobile Apps Are <span class="text-red-500">Required 📈</span>
     </h2>
 
-    <!-- Visual Journey Flow Diagram -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
-      <!-- Stage 1 -->
-      <div class="bg-slate-900/90 border border-red-500/30 rounded-xl p-3.5 relative overflow-hidden text-left shadow-lg">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-mono font-bold text-red-400 bg-red-950/80 px-2 py-0.5 rounded border border-red-800">Stage 1</span>
-          <span class="text-lg">💎</span>
+    <!-- 4 High-Impact Metric Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+      
+      <!-- Stat 1: 88% Mobile Time in Apps -->
+      <div class="bg-slate-900/90 border border-red-500/40 rounded-2xl p-5 shadow-2xl flex items-center gap-4">
+        <div class="text-4xl font-black text-red-400 font-mono tracking-tight shrink-0 w-24 text-center">
+          88%
         </div>
-        <h4 class="text-sm font-bold text-white mb-1">Start with Rails</h4>
-        <p class="text-[11px] text-slate-300 leading-snug">
-          Perfect for <strong>solo developers & small teams</strong>. Takes you from <strong>idea to reality faster</strong> than any stack.
-        </p>
-        <div class="mt-2.5 pt-2 border-t border-slate-800 text-[10px] font-mono text-red-300 flex items-center gap-1">
-          ⚡ Solo Dev ➔ Instant MVP
-        </div>
-      </div>
-
-      <!-- Stage 2 -->
-      <div class="bg-slate-900/90 border border-amber-500/30 rounded-xl p-3.5 relative overflow-hidden text-left shadow-lg">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-mono font-bold text-amber-400 bg-amber-950/80 px-2 py-0.5 rounded border border-amber-800">Stage 2</span>
-          <span class="text-lg">📢</span>
-        </div>
-        <h4 class="text-sm font-bold text-white mb-1">User Demand Hits</h4>
-        <p class="text-[11px] text-slate-300 leading-snug">
-          Users expect a <strong>Home Screen icon</strong> & push notifications, putting pressure on small teams to deliver.
-        </p>
-        <div class="mt-2.5 pt-2 border-t border-slate-800 text-[10px] font-mono text-amber-300 flex items-center gap-1">
-          📲 Mobile Web is Not Enough
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-white m-0">Mobile Time Spent in Apps</h3>
+          <p class="text-xs text-slate-300 leading-snug m-0">
+            Users spend 88% of mobile time inside native apps vs. only 12% on mobile web browsers.
+          </p>
         </div>
       </div>
 
-      <!-- Stage 3 -->
-      <div class="bg-slate-900/90 border border-emerald-500/30 rounded-xl p-3.5 relative overflow-hidden text-left shadow-lg">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800">Stage 3</span>
-          <span class="text-lg">📲</span>
+      <!-- Stat 2: 3.5x Higher Retention -->
+      <div class="bg-slate-900/90 border border-amber-500/40 rounded-2xl p-5 shadow-2xl flex items-center gap-4">
+        <div class="text-4xl font-black text-amber-400 font-mono tracking-tight shrink-0 w-24 text-center">
+          3.5x
         </div>
-        <h4 class="text-sm font-bold text-white mb-1">Mandatory Mobile App</h4>
-        <p class="text-[11px] text-slate-300 leading-snug">
-          App Store presence unlocks maximum user reach, trust, retention & conversion.
-        </p>
-        <div class="mt-2.5 pt-2 border-t border-slate-800 text-[10px] font-mono text-emerald-300 flex items-center gap-1">
-          🏆 Maximum Reach & Retention
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-white m-0">Higher User Retention</h3>
+          <p class="text-xs text-slate-300 leading-snug m-0">
+            Native app users return 3.5x more frequently compared to mobile website visitors.
+          </p>
         </div>
       </div>
+
+      <!-- Stat 3: 3x Higher Conversion -->
+      <div class="bg-slate-900/90 border border-emerald-500/40 rounded-2xl p-5 shadow-2xl flex items-center gap-4">
+        <div class="text-4xl font-black text-emerald-400 font-mono tracking-tight shrink-0 w-24 text-center">
+          3.0x
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-white m-0">Higher In-App Conversion</h3>
+          <p class="text-xs text-slate-300 leading-snug m-0">
+            In-app checkout and subscription conversion rate is 3x higher than mobile web forms.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stat 4: 70%+ Push & Home Screen -->
+      <div class="bg-slate-900/90 border border-purple-500/40 rounded-2xl p-5 shadow-2xl flex items-center gap-4">
+        <div class="text-4xl font-black text-purple-400 font-mono tracking-tight shrink-0 w-24 text-center">
+          70%+
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-white m-0">Expect Push & Home Screen Icon</h3>
+          <p class="text-xs text-slate-300 leading-snug m-0">
+            Over 70% of active mobile users expect instant lock-screen alerts and 1-tap icon access.
+          </p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Key Visual Stats Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-      <!-- Stat 1 -->
-      <div class="p-3 bg-slate-950/80 rounded-xl border border-red-500/20 text-center shadow-md">
-        <div class="text-2xl font-black text-red-400 font-mono tracking-tight">88%</div>
-        <div class="text-[10px] text-slate-300 font-semibold uppercase mt-0.5">Mobile Time in Apps</div>
-        <div class="text-[9px] text-slate-400 mt-1">vs. 12% on Mobile Browser</div>
-      </div>
-
-      <!-- Stat 2 -->
-      <div class="p-3 bg-slate-950/80 rounded-xl border border-amber-500/20 text-center shadow-md">
-        <div class="text-2xl font-black text-amber-400 font-mono tracking-tight">3.5x</div>
-        <div class="text-[10px] text-slate-300 font-semibold uppercase mt-0.5">Higher Retention</div>
-        <div class="text-[9px] text-slate-400 mt-1">App users return far more often</div>
-      </div>
-
-      <!-- Stat 3 -->
-      <div class="p-3 bg-slate-950/80 rounded-xl border border-purple-500/20 text-center shadow-md">
-        <div class="text-2xl font-black text-purple-400 font-mono tracking-tight">70%+</div>
-        <div class="text-[10px] text-slate-300 font-semibold uppercase mt-0.5">Expect Push & Icon</div>
-        <div class="text-[9px] text-slate-400 mt-1">Home screen presence = Trust</div>
-      </div>
-
-      <!-- Stat 4 -->
-      <div class="p-3 bg-slate-950/80 rounded-xl border border-emerald-500/20 text-center shadow-md">
-        <div class="text-2xl font-black text-emerald-400 font-mono tracking-tight">3x</div>
-        <div class="text-[10px] text-slate-300 font-semibold uppercase mt-0.5">Higher Conversion</div>
-        <div class="text-[9px] text-slate-400 mt-1">In-app purchase & checkout rate</div>
-      </div>
-    </div>
-
-    <!-- Bottom Highlight Banner -->
-    <div class="mt-3.5 p-2.5 bg-gradient-to-r from-red-950/70 via-slate-900 to-amber-950/70 border border-slate-800 rounded-xl flex items-center justify-between text-left px-4">
-      <div class="flex items-center gap-2">
-        <span class="text-base">💡</span>
-        <span class="text-xs text-slate-200 font-medium">
-          <strong>The Solo Dev Paradox:</strong> You launch fast on Rails, but user demand for mobile apps threatens to overwhelm small teams.
-        </span>
-      </div>
-      <span class="text-[10px] font-mono text-amber-300 bg-slate-950 px-2 py-1 rounded border border-amber-500/30 shrink-0">
-        Enter Hotwire Native 🚀
+    <!-- Bottom Takeaway Banner -->
+    <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs flex items-center justify-between">
+      <span class="text-slate-300">
+        🎯 <strong>Bottom Line:</strong> Mobile apps aren't optional — they are where your customers spend 90% of their digital lives.
+      </span>
+      <span class="text-[10px] font-mono text-red-400 bg-red-950/80 px-2.5 py-1 rounded border border-red-800 font-bold shrink-0 ml-2">
+        Mobile First 📱
       </span>
     </div>
+
   </div>
 </template>
 
