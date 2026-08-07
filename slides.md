@@ -200,4 +200,16 @@ layout: default
 transition: slide-left
 layout: default
 ---
+<WhatElseHotwireNativeSlide />
+
+---
+transition: slide-left
+layout: default
+---
+<WhenNotToUseHotwireNativeSlide />
+
+---
+transition: slide-up
+class: text-center ruby-hero
+---
 <PortfolioTalksSlide />
