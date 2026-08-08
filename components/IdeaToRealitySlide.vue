@@ -3,13 +3,18 @@
     
     <!-- Header Badge -->
     <div class="flex justify-between items-center mb-2">
-      <span class="rails-badge font-bold">💡 The Genesis</span>
-      <span class="text-xs font-mono text-slate-400">0 to 1 Transformation</span>
+      <span class="rails-badge font-bold">{{ currentLang === 'zh' ? '💡 創立之初' : '💡 The Genesis' }}</span>
+      <span class="text-xs font-mono text-slate-400">{{ currentLang === 'zh' ? '從 0 到 1 的轉變' : '0 to 1 Transformation' }}</span>
     </div>
 
     <!-- Main Title -->
     <h2 class="text-3xl font-black tracking-tight text-white mb-6">
-      Turning an <span class="text-amber-400">Idea</span> into a <span class="text-emerald-400">Product 🚀</span>
+      <template v-if="currentLang === 'zh'">
+        將 <span class="text-amber-400">點子 (Idea)</span> 轉化為 <span class="text-emerald-400">產品 (Product) 🚀</span>
+      </template>
+      <template v-else>
+        Turning an <span class="text-amber-400">Idea</span> into a <span class="text-emerald-400">Product 🚀</span>
+      </template>
     </h2>
 
     <!-- Visual 3-Node Transformation Diagram -->
@@ -26,7 +31,7 @@
           <div class="w-16 h-16 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center text-4xl mx-auto shadow-lg">
             💡
           </div>
-          <h3 class="text-xl font-black text-white m-0">Idea</h3>
+          <h3 class="text-xl font-black text-white m-0">{{ currentLang === 'zh' ? '點子 (Idea)' : 'Idea' }}</h3>
         </div>
 
         <!-- Center: Rails (Engine Bridge) [Cols 5-7] -->
@@ -48,7 +53,7 @@
           <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-4xl mx-auto shadow-lg">
             🌐
           </div>
-          <h3 class="text-xl font-black text-white m-0">Product</h3>
+          <h3 class="text-xl font-black text-white m-0">{{ currentLang === 'zh' ? '產品 (Product)' : 'Product' }}</h3>
         </div>
 
       </div>
@@ -57,7 +62,7 @@
     <!-- Bottom Takeaway Banner -->
     <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs flex items-center justify-between">
       <span class="text-slate-300">
-        🚀 <strong>The Rails Advantage:</strong> Turns raw ideas into shipping products faster than any other framework.
+        🚀 <strong>The Rails Advantage:</strong> {{ currentLang === 'zh' ? '比任何其他框架更快速地將靈感轉化為實際上線的產品。' : 'Turns raw ideas into shipping products faster than any other framework.' }}
       </span>
       <span class="text-[10px] font-mono text-red-400 bg-red-950/80 px-2.5 py-1 rounded border border-red-800 font-bold shrink-0 ml-2">
         0 to 1 Velocity 💎
@@ -68,4 +73,5 @@
 </template>
 
 <script setup>
+import { currentLang } from '../composables/useLang'
 </script>

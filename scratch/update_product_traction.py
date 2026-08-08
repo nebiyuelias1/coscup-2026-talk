@@ -1,4 +1,9 @@
-<template>
+import os
+
+components_dir = "/home/netale/coscup-hotwire-native-talk/components"
+
+# 1. ProductTractionSlide.vue
+product_traction = '''<template>
   <div class="product-traction-slide w-full my-auto flex flex-col justify-center text-left">
     
     <!-- Header Badge -->
@@ -77,3 +82,9 @@
 <script setup>
 import { currentLang } from '../composables/useLang'
 </script>
+'''
+
+with open(f"{components_dir}/ProductTractionSlide.vue", "w") as f:
+    f.write(product_traction)
+
+print("ProductTractionSlide updated")

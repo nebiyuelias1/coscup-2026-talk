@@ -1,4 +1,127 @@
-<template>
+import os
+
+components_dir = "/home/netale/coscup-hotwire-native-talk/components"
+
+# 1. IdeaToRealitySlide.vue
+idea_to_reality = '''<template>
+  <div class="idea-to-reality-slide w-full my-auto flex flex-col justify-center text-left">
+    <div class="flex justify-between items-center mb-2">
+      <span class="rails-badge font-bold">{{ currentLang === 'zh' ? '💡 產品旅程' : '💡 Product Journey' }}</span>
+      <span class="text-xs font-mono text-slate-400">{{ currentLang === 'zh' ? '從零到一' : 'From Zero to One' }}</span>
+    </div>
+
+    <h2 class="text-3xl font-black tracking-tight text-white mb-6">
+      <template v-if="currentLang === 'zh'">
+        從點子到上線：<span class="text-red-500">Rails 單體架構 🚀</span>
+      </template>
+      <template v-else>
+        From Idea to Reality: <span class="text-red-500">The Rails Way 🚀</span>
+      </template>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-2">
+        <span class="text-3xl">🛠️</span>
+        <h3 class="text-base font-bold text-white m-0">{{ currentLang === 'zh' ? '單人開發火力' : 'Solo Developer Power' }}</h3>
+        <p class="text-xs text-slate-300 leading-relaxed m-0">
+          {{ currentLang === 'zh' ? '1 位工程師便能獨自處理全棧、資料庫、後端與前端介面。' : '1 engineer handles DB, backend, and web UI effortlessly.' }}
+        </p>
+      </div>
+
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-2">
+        <span class="text-3xl">⚡</span>
+        <h3 class="text-base font-bold text-white m-0">{{ currentLang === 'zh' ? '極速疊代驗證' : 'Rapid Validation' }}</h3>
+        <p class="text-xs text-slate-300 leading-relaxed m-0">
+          {{ currentLang === 'zh' ? '幾天內就能驗證產品點子並推向市場收集反饋。' : 'Validate product ideas and launch web apps in days.' }}
+        </p>
+      </div>
+
+      <div class="bg-slate-900/90 border border-red-500/30 rounded-2xl p-5 shadow-xl space-y-2 bg-red-950/10">
+        <span class="text-3xl">📈</span>
+        <h3 class="text-base font-bold text-white m-0">{{ currentLang === 'zh' ? '獲得市場 Traction' : 'Hits Traction' }}</h3>
+        <p class="text-xs text-slate-300 leading-relaxed m-0">
+          {{ currentLang === 'zh' ? '使用者開始大量湧入，需求爆發！' : 'Users flood in, generating massive engagement!' }}
+        </p>
+      </div>
+    </div>
+
+    <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs flex items-center justify-between">
+      <span class="text-slate-300">
+        ✨ <strong>Rails Advantage:</strong> {{ currentLang === 'zh' ? '單體架構帶來極高效率，讓小團隊專注打造產品。' : 'The monolithic speed allows small teams to move ridiculously fast.' }}
+      </span>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { currentLang } from '../composables/useLang'
+</script>
+'''
+
+with open(f"{components_dir}/IdeaToRealitySlide.vue", "w") as f:
+    f.write(idea_to_reality)
+
+# 2. MobileRequirementSlide.vue
+mobile_req = '''<template>
+  <div class="mobile-requirement-slide w-full my-auto flex flex-col justify-center text-left">
+    <div class="flex justify-between items-center mb-2">
+      <span class="rails-badge font-bold">{{ currentLang === 'zh' ? '⚠️ 抉擇時刻' : '⚠️ The Dilemma' }}</span>
+      <span class="text-xs font-mono text-slate-400">{{ currentLang === 'zh' ? '跨平台挑戰' : 'Cross-Platform Challenge' }}</span>
+    </div>
+
+    <h2 class="text-3xl font-black tracking-tight text-white mb-5">
+      <template v-if="currentLang === 'zh'">
+        我們需要 <span class="text-red-500">Mobile Apps</span>... 該怎麼做？ 🤔
+      </template>
+      <template v-else>
+        We Need <span class="text-red-500">Mobile Apps</span>... Now What? 🤔
+      </template>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-2">
+        <span class="text-2xl">🌐</span>
+        <h3 class="text-sm font-bold text-amber-400 m-0">Option A: PWA</h3>
+        <p class="text-xs text-slate-300 m-0">
+          {{ currentLang === 'zh' ? '快速但受限：缺乏 App Store 上架與完整原生能力。' : 'Fast but limited: Lacks App Store presence & full native capabilities.' }}
+        </p>
+      </div>
+
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-2">
+        <span class="text-2xl">⚛️</span>
+        <h3 class="text-sm font-bold text-cyan-400 m-0">Option B: React Native / Flutter</h3>
+        <p class="text-xs text-slate-300 m-0">
+          {{ currentLang === 'zh' ? '強大但高昂：需重寫所有前端與 logic，維護雙重 Codebase。' : 'Powerful but expensive: Duplicate business logic & components.' }}
+        </p>
+      </div>
+
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-2">
+        <span class="text-2xl">🍎🤖</span>
+        <h3 class="text-sm font-bold text-purple-400 m-0">Option C: Swift & Kotlin</h3>
+        <p class="text-xs text-slate-300 m-0">
+          {{ currentLang === 'zh' ? '頂級體驗但成本巨大：需招募 2 個獨立的原生開發團隊。' : 'Top experience but maximum cost: Requires 2 dedicated native teams.' }}
+        </p>
+      </div>
+    </div>
+
+    <div class="p-3 bg-red-950/30 border border-red-500/30 rounded-xl text-xs flex items-center justify-between">
+      <span class="text-slate-200">
+        💡 <strong>{{ currentLang === 'zh' ? '問題根源:' : 'The Core Problem:' }}</strong> {{ currentLang === 'zh' ? '資源與人力有限時，重複開發只會拖慢腳步。' : 'Small teams cannot afford duplicating business logic across 3 codebases.' }}
+      </span>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { currentLang } from '../composables/useLang'
+</script>
+'''
+
+with open(f"{components_dir}/MobileRequirementSlide.vue", "w") as f:
+    f.write(mobile_req)
+
+# 3. RailsContrarianSlide.vue
+rails_contrarian = '''<template>
   <div class="rails-contrarian-slide w-full my-auto flex flex-col justify-center text-left">
     
     <!-- Progress Indicator Bar for single pillar slides -->
@@ -265,3 +388,9 @@ const currentPillarIndex = computed(() => {
   }
 })
 </script>
+'''
+
+with open(f"{components_dir}/RailsContrarianSlide.vue", "w") as f:
+    f.write(rails_contrarian)
+
+print("Updated IdeaToRealitySlide, MobileRequirementSlide, RailsContrarianSlide")

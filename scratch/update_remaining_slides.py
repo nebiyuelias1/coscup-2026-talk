@@ -1,4 +1,9 @@
-<template>
+import os
+
+components_dir = "/home/netale/coscup-hotwire-native-talk/components"
+
+# AlternativesSlide.vue
+alternatives_slide = '''<template>
   <div class="alternatives-slide w-full my-auto flex flex-col justify-center text-left">
     
     <!-- Progress Header -->
@@ -110,7 +115,7 @@
           {{ currentLang === 'zh' ? 'React Native 強大，但對於小型 Rails 團隊來說維護成本過高。' : 'React Native is powerful, but adds massive maintenance overhead for Rails teams.' }}
         </template>
         <template v-else>
-          {{ currentLang === 'zh' ? '純原生適合極度要求客製化底層的團隊，但需要龐大的專職原生資源。' : 'Pure native is designed for large teams with dedicated native engineers for each platform.' }}
+          {{ currentLang === 'zh' ? '純原生適合大企業，但小型團隊無力負擔 3 套 Codebase。' : 'Pure native is for tech giants — small teams cannot maintain 3 codebases.' }}
         </template>
       </span>
     </div>
@@ -138,3 +143,9 @@ const currentStepIndex = computed(() => {
   }
 })
 </script>
+'''
+
+with open(f"{components_dir}/AlternativesSlide.vue", "w") as f:
+    f.write(alternatives_slide)
+
+print("AlternativesSlide updated")

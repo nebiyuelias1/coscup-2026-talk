@@ -40,7 +40,7 @@
             <h3
               class="text-xl font-black text-white tracking-tight m-0 flex items-center gap-2"
             >
-              哈羅👋, 我是 Neba
+              {{ currentLang === 'zh' ? '哈囉👋, 我是 Neba' : 'Hello 👋, I am Neba' }}
             </h3>
           </div>
         </div>
@@ -56,7 +56,7 @@
             >
             <div>
               <span class="text-red-400 font-bold mr-1.5"
-                >7+ Years Experience</span
+                >{{ currentLang === 'zh' ? '7+ 年全棧開發經驗' : '7+ Years Experience' }}</span
               >
             </div>
           </li>
@@ -70,7 +70,7 @@
             >
             <div>
               <span class="text-blue-400 font-bold mr-1.5"
-                >Ethiopia 🇪🇹 ➔ Taiwan</span
+                >{{ currentLang === 'zh' ? '埃塞俄比亞 🇪🇹 ➔ 台灣 🇹🇼 (在台學習與工作 3 年)' : 'Ethiopia 🇪🇹 ➔ Taiwan 🇹🇼 (3 years in TW)' }}</span
               >
             </div>
           </li>
@@ -84,7 +84,7 @@
             >
             <div>
               <span class="text-emerald-400 font-bold mr-1.5"
-                >ASUS & 508.dev Co-op</span
+                >{{ currentLang === 'zh' ? '任職於 ASUS & 508.dev 工程合作社成員' : 'ASUS & 508.dev Co-op Member' }}</span
               >
             </div>
           </li>
@@ -98,7 +98,7 @@
             >
             <div>
               <span class="text-purple-400 font-bold mr-1.5"
-                >Shipped & Building with Hotwire Native</span
+                >{{ currentLang === 'zh' ? '已上架並持續使用 Hotwire Native 開發 Mobile App' : 'Shipped & Building with Hotwire Native' }}</span
               >
             </div>
           </li>
@@ -111,7 +111,7 @@
               >💎</span
             >
             <div>
-              <span class="text-rose-400 font-bold mr-1.5">Rubyist</span>
+              <span class="text-rose-400 font-bold mr-1.5">{{ currentLang === 'zh' ? 'Rubyist 熱情狂熱者' : 'Rubyist' }}</span>
             </div>
           </li>
 
@@ -121,7 +121,7 @@
           >
             <span class="text-cyan-400 text-sm leading-none shrink-0">🐧</span>
             <div class="flex items-center gap-2 flex-wrap">
-              <span class="text-cyan-400 font-bold">OS & Environment:</span>
+              <span class="text-cyan-400 font-bold">{{ currentLang === 'zh' ? '作業系統與環境:' : 'OS & Environment:' }}</span>
               <span class="text-slate-200 font-mono font-bold text-[11px]"
                 >I use omarchy btw</span
               >
@@ -164,4 +164,6 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { currentLang } from '../composables/useLang'
+</script>

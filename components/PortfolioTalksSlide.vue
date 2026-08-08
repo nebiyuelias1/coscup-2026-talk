@@ -28,11 +28,11 @@
 
     <!-- Title -->
     <h1 class="text-4xl font-black tracking-tight text-white mb-2">
-      Thank You! 🙏
+      {{ currentLang === 'zh' ? '謝謝大家！ 🙏' : 'Thank You! 🙏' }}
     </h1>
 
     <p class="text-slate-300 text-sm mb-6 max-w-md mx-auto">
-      Scan for presentation slide, and starter code.
+      {{ currentLang === 'zh' ? '掃描 QR Code 取得簡報檔與專案起手式 Code！' : 'Scan for presentation slide, and starter code.' }}
     </p>
 
     <!-- Minimalist Centered QR Code Card -->
@@ -68,4 +68,6 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { currentLang } from '../composables/useLang'
+</script>
