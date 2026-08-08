@@ -46,16 +46,10 @@
           class="flex-1 bg-slate-950 border border-slate-800 rounded-lg p-1 shadow-inner flex items-center justify-center overflow-hidden min-h-[290px] relative"
         >
           <img
-            v-if="hasWebImage"
-            :src="webImgSrc"
+            :src="withBase('/result_web.jpg')"
             alt="Web Browser Result"
             class="w-full h-full object-contain rounded"
           />
-          <div v-else class="p-2 text-center space-y-0.5">
-            <span class="text-xl">🌐</span>
-            <div class="text-[10px] font-mono text-red-300 font-bold">Web Screenshot</div>
-            <div class="text-[8px] text-slate-500 font-mono">result_web.jpg</div>
-          </div>
 
           <!-- Red Outline Overlay for Web Browser -->
           <div
@@ -85,16 +79,10 @@
           class="flex-1 bg-slate-950 border border-slate-800 rounded-lg p-1 shadow-inner flex items-center justify-center overflow-hidden min-h-[290px] relative"
         >
           <img
-            v-if="hasIosImage"
-            :src="iosImgSrc"
+            :src="withBase('/result_ios.jpg')"
             alt="iOS App Result"
             class="w-full h-full object-contain rounded"
           />
-          <div v-else class="p-2 text-center space-y-0.5">
-            <span class="text-xl">🍏</span>
-            <div class="text-[10px] font-mono text-blue-300 font-bold">iOS Screenshot</div>
-            <div class="text-[8px] text-slate-500 font-mono">result_ios.jpg</div>
-          </div>
 
           <!-- Red Outline Overlays for iOS -->
           <div
@@ -151,16 +139,10 @@
           class="flex-1 bg-slate-950 border border-slate-800 rounded-lg p-1 shadow-inner flex items-center justify-center overflow-hidden min-h-[290px] relative"
         >
           <img
-            v-if="hasAndroidImage"
-            :src="androidImgSrc"
+            :src="withBase('/result_android.jpg')"
             alt="Android App Result"
             class="w-full h-full object-contain rounded"
           />
-          <div v-else class="p-2 text-center space-y-0.5">
-            <span class="text-xl">🤖</span>
-            <div class="text-[10px] font-mono text-emerald-300 font-bold">Android Screenshot</div>
-            <div class="text-[8px] text-slate-500 font-mono">result_android.jpg</div>
-          </div>
 
           <!-- Red Outline Overlays for Android -->
           <div
@@ -207,35 +189,18 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+const withBase = (path) => {
+  if (!path) return ''
+  const base = import.meta.env.BASE_URL || '/'
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path
+  const cleanBase = base.endsWith('/') ? base : base + '/'
+  return cleanBase + cleanPath
+}
+
+import { ref } from "vue";
 import { currentLang } from '../composables/useLang'
 
 const showBreakdown = ref(false);
-
-const webImgSrc = ref("/result_web.jpg");
-const iosImgSrc = ref("/result_ios.jpg");
-const androidImgSrc = ref("/result_android.jpg");
-
-const hasWebImage = ref(false);
-const hasIosImage = ref(false);
-const hasAndroidImage = ref(false);
-
-const checkImage = (url, refVar) => {
-  const img = new Image();
-  img.onload = () => {
-    refVar.value = true;
-  };
-  img.onerror = () => {
-    refVar.value = false;
-  };
-  img.src = url;
-};
-
-onMounted(() => {
-  checkImage(webImgSrc.value, hasWebImage);
-  checkImage(iosImgSrc.value, hasIosImage);
-  checkImage(androidImgSrc.value, hasAndroidImage);
-});
 </script>
 
 <style scoped>
