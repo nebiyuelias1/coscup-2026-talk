@@ -8,45 +8,6 @@
         >Monorepo Setup:
         <span class="text-red-500">Rails + iOS + Android 📦</span></span
       >
-
-      <!-- Project Tab Selector Buttons -->
-      <div class="flex items-center gap-1.5 font-mono text-xs">
-        <button
-          @click="activeTab = 'backend'"
-          :class="[
-            'px-2.5 py-1 rounded-lg border transition-all flex items-center gap-1 font-bold',
-            activeTab === 'backend'
-              ? 'bg-red-950/80 border-red-500 text-red-300 shadow-lg scale-105'
-              : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white',
-          ]"
-        >
-          💎 Backend
-        </button>
-
-        <button
-          @click="activeTab = 'ios'"
-          :class="[
-            'px-2.5 py-1 rounded-lg border transition-all flex items-center gap-1 font-bold',
-            activeTab === 'ios'
-              ? 'bg-blue-950/80 border-blue-500 text-blue-300 shadow-lg scale-105'
-              : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white',
-          ]"
-        >
-          🍏 iOS
-        </button>
-
-        <button
-          @click="activeTab = 'android'"
-          :class="[
-            'px-2.5 py-1 rounded-lg border transition-all flex items-center gap-1 font-bold',
-            activeTab === 'android'
-              ? 'bg-emerald-950/80 border-emerald-500 text-emerald-300 shadow-lg scale-105'
-              : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white',
-          ]"
-        >
-          🤖 Android
-        </button>
-      </div>
     </h2>
 
     <!-- 2 Column Grid Layout: Left Root Monorepo Tree, Right Detailed Project Structure & Code -->
@@ -142,10 +103,6 @@
           >
             <span class="text-red-400 font-bold"
               >backend/ — Rails Monolith Structure</span
-            >
-            <span
-              class="bg-red-950 text-red-300 px-2 py-0.5 rounded text-[10px] border border-red-800 font-bold"
-              >Rails 8</span
             >
           </div>
 
@@ -287,19 +244,6 @@
           <code class="text-emerald-300">/android</code> folder extending
           <code class="text-emerald-300">HotwireActivity</code>.
         </template>
-      </span>
-
-      <span
-        :class="[
-          'text-[10px] font-mono px-2 py-0.5 rounded border shrink-0 font-bold ml-2',
-          activeTab === 'backend'
-            ? 'bg-red-950 text-red-300 border-red-700'
-            : activeTab === 'ios'
-              ? 'bg-blue-950 text-blue-300 border-blue-700'
-              : 'bg-emerald-950 text-emerald-300 border-emerald-700',
-        ]"
-      >
-        LitLoop {{ activeTab.toUpperCase() }} ⚡
       </span>
     </div>
   </div>

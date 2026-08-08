@@ -45,86 +45,89 @@
           </div>
         </div>
 
-        <!-- Highlight Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-          <!-- Card 1: 7+ Years Exp -->
-          <div
-            class="p-2.5 bg-slate-950/70 rounded-xl border border-red-500/20 hover:border-red-500/40 transition-colors shadow-sm"
+        <!-- Highlight Bullet List -->
+        <ul class="space-y-3 my-2 p-0 list-none text-left">
+          <!-- Bullet 1: 7+ Years Exp -->
+          <li
+            class="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed"
           >
-            <div
-              class="text-red-400 font-bold text-xs mb-0.5 flex items-center gap-1.5"
+            <span class="text-red-400 text-sm leading-none mt-0.5 shrink-0"
+              >🚀</span
             >
-              <span>🚀</span> 7+ Years Experience
-            </div>
-            <p class="text-slate-300 m-0 text-[11px] leading-tight">
-              Full-stack engineer building scalable web & mobile applications.
-            </p>
-          </div>
-
-          <!-- Card 2: Ethiopia & Taiwan -->
-          <div
-            class="p-2.5 bg-slate-950/70 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-colors shadow-sm"
-          >
-            <div
-              class="text-blue-400 font-bold text-xs mb-0.5 flex items-center gap-1.5"
-            >
-              <span>🌍</span> Ethiopia 🇪🇹 ➔ Taiwan 🇹🇼
-            </div>
-            <p class="text-slate-300 m-0 text-[11px] leading-tight">
-              Originally from Ethiopia, studying & working in Taiwan for 3
-              years.
-            </p>
-          </div>
-
-          <!-- Card 3: ASUS & 508.dev -->
-          <div
-            class="p-2.5 bg-slate-950/70 rounded-xl border border-emerald-500/20 hover:border-emerald-500/40 transition-colors shadow-sm"
-          >
-            <div
-              class="text-emerald-400 font-bold text-xs mb-0.5 flex items-center gap-1.5"
-            >
-              <span>🏢</span> ASUS & 508.dev Co-op
-            </div>
-            <p class="text-slate-300 m-0 text-[11px] leading-tight">
-              Currently working at ASUS and member of software engineer co-op
-              508.dev.
-            </p>
-          </div>
-
-          <!-- Card 4: Shipped & Currently Building Hotwire Native Apps -->
-          <div
-            class="p-2.5 bg-slate-950/70 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-colors shadow-sm"
-          >
-            <div
-              class="text-purple-400 font-bold text-xs mb-0.5 flex items-center gap-1.5"
-            >
-              <span>📱</span> Shipped & Building on Mobile
-            </div>
-            <p class="text-slate-300 m-0 text-[11px] leading-tight">
-              Shipped Hotwire Native apps on iOS & Android — currently building my next app with Rails & Hotwire Native.
-            </p>
-          </div>
-
-          <!-- Card 5: Omarchy OS -->
-          <div
-            class="p-2.5 bg-slate-950/70 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-colors shadow-sm md:col-span-2 flex items-center justify-between"
-          >
-            <div class="flex items-center gap-2">
-              <span
-                class="text-cyan-400 font-bold text-xs flex items-center gap-1.5"
+            <div>
+              <span class="text-red-400 font-bold mr-1.5"
+                >7+ Years Experience</span
               >
-                <span>🐧</span> OS & Environment:
-              </span>
-              <span class="text-slate-200 text-[11px] font-mono font-bold"
+            </div>
+          </li>
+
+          <!-- Bullet 2: Ethiopia & Taiwan -->
+          <li
+            class="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed"
+          >
+            <span class="text-blue-400 text-sm leading-none mt-0.5 shrink-0"
+              >🌍</span
+            >
+            <div>
+              <span class="text-blue-400 font-bold mr-1.5"
+                >Ethiopia 🇪🇹 ➔ Taiwan</span
+              >
+            </div>
+          </li>
+
+          <!-- Bullet 3: ASUS & 508.dev -->
+          <li
+            class="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed"
+          >
+            <span class="text-emerald-400 text-sm leading-none mt-0.5 shrink-0"
+              >🏢</span
+            >
+            <div>
+              <span class="text-emerald-400 font-bold mr-1.5"
+                >ASUS & 508.dev Co-op</span
+              >
+            </div>
+          </li>
+
+          <!-- Bullet 4: Shipped & Currently Building Hotwire Native Apps -->
+          <li
+            class="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed"
+          >
+            <span class="text-purple-400 text-sm leading-none mt-0.5 shrink-0"
+              >📱</span
+            >
+            <div>
+              <span class="text-purple-400 font-bold mr-1.5"
+                >Shipped & Building with Hotwire Native</span
+              >
+            </div>
+          </li>
+
+          <!-- Bullet 5: Rubyist -->
+          <li
+            class="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed"
+          >
+            <span class="text-rose-400 text-sm leading-none mt-0.5 shrink-0"
+              >💎</span
+            >
+            <div>
+              <span class="text-rose-400 font-bold mr-1.5">Rubyist</span>
+            </div>
+          </li>
+
+          <!-- Bullet 6: Omarchy OS -->
+          <li
+            class="flex items-center gap-2.5 text-xs text-slate-300 leading-relaxed"
+          >
+            <span class="text-cyan-400 text-sm leading-none shrink-0">🐧</span>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-cyan-400 font-bold">OS & Environment:</span>
+              <span class="text-slate-200 font-mono font-bold text-[11px]"
                 >I use omarchy btw</span
               >
             </div>
-            <span
-              class="text-[10px] font-mono text-cyan-300 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800/80"
-              >Arch Linux</span
-            >
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <!-- Links Row -->
         <div
