@@ -11,12 +11,6 @@ drawings:
 transition: slide-left
 comark: true
 duration: 30min
-style: |
-  .slidev-layout {
-    background: radial-gradient(circle at 50% 20%, rgba(204, 0, 0, 0.25) 0%, transparent 60%),
-                radial-gradient(circle at 80% 80%, rgba(157, 78, 221, 0.15) 0%, transparent 50%),
-                #0F0D13 !important;
-  }
 ---
 
 <CoverSlide />

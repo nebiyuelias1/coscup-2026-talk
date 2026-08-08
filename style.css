@@ -1,29 +1,95 @@
 /* Custom Ruby on Rails & Hotwire Theme for Slidev */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
 
-:root {
+:root, html.dark {
   --ruby-red: #CC0000;
   --ruby-bright: #FF2A3B;
   --ruby-dark: #800000;
   --rails-bg-dark: #0F0D13;
-  --rails-card-bg: #1B1822;
-  --rails-card-border: #322A3F;
+  --rails-card-bg: rgba(27, 24, 34, 0.7);
+  --rails-card-border: rgba(255, 255, 255, 0.08);
+  --rails-card-hover-border: rgba(255, 42, 59, 0.3);
   --hotwire-blue: #3682F6;
   --turbo-yellow: #FFD166;
   --strada-purple: #9D4EDD;
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+
+  --heading-h1-bg: linear-gradient(135deg, #FFFFFF 30%, #FF6B7A 70%, #CC0000 100%);
+  --heading-h2-color: #F1F5F9;
+  --heading-h3-color: #E2E8F0;
+
+  --slide-bg: radial-gradient(circle at 85% 15%, rgba(204, 0, 0, 0.12) 0%, transparent 45%),
+              radial-gradient(circle at 15% 85%, rgba(54, 130, 246, 0.08) 0%, transparent 45%),
+              #0F0D13;
+
+  --slide-hero-bg: radial-gradient(circle at 50% 20%, rgba(255, 42, 59, 0.18) 0%, transparent 60%),
+                   radial-gradient(circle at 80% 80%, rgba(157, 78, 221, 0.12) 0%, transparent 50%),
+                   #0B090E;
+
+  --control-bg: rgba(15, 23, 42, 0.9);
+  --control-hover-bg: rgba(30, 41, 59, 0.9);
+  --control-text: #F8FAFC;
+  --control-border: rgba(239, 68, 68, 0.4);
+
+  --chip-bg: #0F172A;
+  --chip-text: #CBD5E1;
+  --chip-border: #334155;
+}
+
+html.light {
+  --ruby-red: #CC0000;
+  --ruby-bright: #E11D48;
+  --ruby-dark: #800000;
+  --rails-bg-dark: #F8FAFC;
+  --rails-card-bg: rgba(255, 255, 255, 0.9);
+  --rails-card-border: rgba(226, 232, 240, 0.9);
+  --rails-card-hover-border: rgba(225, 29, 72, 0.4);
+  --hotwire-blue: #2563EB;
+  --turbo-yellow: #D97706;
+  --strada-purple: #7C3AED;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+
+  --heading-h1-bg: linear-gradient(135deg, #880000 0%, #CC0000 50%, #E11D48 100%);
+  --heading-h2-color: #0F172A;
+  --heading-h3-color: #1E293B;
+
+  --slide-bg: radial-gradient(circle at 85% 15%, rgba(204, 0, 0, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 15% 85%, rgba(37, 99, 235, 0.07) 0%, transparent 50%),
+              #F8FAFC;
+
+  --slide-hero-bg: radial-gradient(circle at 50% 20%, rgba(225, 29, 72, 0.12) 0%, transparent 60%),
+                   radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
+                   #F1F5F9;
+
+  --control-bg: rgba(255, 255, 255, 0.95);
+  --control-hover-bg: rgba(241, 245, 249, 0.95);
+  --control-text: #0F172A;
+  --control-border: rgba(239, 68, 68, 0.4);
+
+  --chip-bg: #F1F5F9;
+  --chip-text: #334155;
+  --chip-border: #CBD5E1;
 }
 
 body, .slidev-layout {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   background-color: var(--rails-bg-dark) !important;
   color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .slidev-layout {
   padding-bottom: 3.5rem !important;
   box-sizing: border-box !important;
+  background: var(--slide-bg) !important;
+}
+
+.slidev-layout.ruby-hero {
+  background: var(--slide-hero-bg) !important;
 }
 
 /* Ruby Code font */
@@ -31,24 +97,11 @@ code, pre, kbd, .font-mono {
   font-family: 'Fira Code', monospace !important;
 }
 
-/* Custom Slide Backgrounds */
-.slidev-layout {
-  background: radial-gradient(circle at 85% 15%, rgba(204, 0, 0, 0.12) 0%, transparent 45%),
-              radial-gradient(circle at 15% 85%, rgba(54, 130, 246, 0.08) 0%, transparent 45%),
-              #0F0D13 !important;
-}
-
-.slidev-layout.ruby-hero {
-  background: radial-gradient(circle at 50% 20%, rgba(255, 42, 59, 0.18) 0%, transparent 60%),
-              radial-gradient(circle at 80% 80%, rgba(157, 78, 221, 0.12) 0%, transparent 50%),
-              #0B090E !important;
-}
-
 /* Rails Headings */
 h1 {
   font-weight: 800 !important;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #FFFFFF 30%, #FF6B7A 70%, #CC0000 100%);
+  background: var(--heading-h1-bg);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -56,12 +109,26 @@ h1 {
 h2 {
   font-weight: 700 !important;
   letter-spacing: -0.02em;
-  color: #F1F5F9;
+  color: var(--heading-h2-color) !important;
 }
 
 h3 {
   font-weight: 600 !important;
-  color: #E2E8F0;
+  color: var(--heading-h3-color) !important;
+}
+
+/* Controls in global-top.vue */
+.theme-toggle-btn, .lang-select {
+  background-color: var(--control-bg) !important;
+  color: var(--control-text) !important;
+  border-color: var(--control-border) !important;
+}
+.theme-toggle-btn:hover, .lang-select:hover {
+  background-color: var(--control-hover-bg) !important;
+}
+.lang-select option {
+  background-color: var(--rails-bg-dark) !important;
+  color: var(--control-text) !important;
 }
 
 /* Ruby Gem Glow Effects */
@@ -96,46 +163,46 @@ h3 {
 .rails-badge {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: linear-gradient(135deg, rgba(204, 0, 0, 0.2), rgba(128, 0, 0, 0.4));
-  color: #FF6B7A;
-  border: 1px solid rgba(255, 42, 59, 0.3);
+  background: linear-gradient(135deg, rgba(204, 0, 0, 0.15), rgba(128, 0, 0, 0.3));
+  color: #EF4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .hotwire-badge {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: linear-gradient(135deg, rgba(54, 130, 246, 0.2), rgba(30, 58, 138, 0.4));
-  color: #60A5FA;
-  border: 1px solid rgba(96, 165, 250, 0.3);
+  background: linear-gradient(135deg, rgba(54, 130, 246, 0.15), rgba(30, 58, 138, 0.3));
+  color: #3B82F6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .title-chip {
-  background: #0F172A;
-  color: #CBD5E1;
-  border: 1px solid #334155;
+  background: var(--chip-bg) !important;
+  color: var(--chip-text) !important;
+  border: 1px solid var(--chip-border) !important;
   font-family: 'Fira Code', monospace !important;
 }
 
 /* Slide Card Containers */
 .rails-card {
-  background: rgba(27, 24, 34, 0.7);
+  background: var(--rails-card-bg) !important;
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--rails-card-border) !important;
   border-radius: 1rem;
   padding: 1.25rem;
   transition: all 0.3s ease;
 }
 
 .rails-card:hover {
-  border-color: rgba(255, 42, 59, 0.3);
+  border-color: var(--rails-card-hover-border) !important;
   transform: translateY(-2px);
 }
 
 /* Shiki Code Block Customizations */
 .slidev-code-wrapper {
   border-radius: 0.75rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--rails-card-border) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Highlighted keywords in text */
@@ -154,7 +221,85 @@ h3 {
   justify-content: space-between;
   align-items: center;
   font-size: 0.75rem;
-  color: #64748B;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  border-top: 1px solid var(--rails-card-border);
   padding-top: 0.5rem;
+}
+
+/* --- LIGHT MODE COMPONENT OVERRIDES --- */
+html.light .bg-slate-900,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-950,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/90 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light .bg-slate-800,
+html.light .bg-slate-800\/90,
+html.light .bg-slate-800\/80 {
+  background-color: rgba(241, 245, 249, 0.9) !important;
+  border-color: rgba(203, 213, 225, 0.8) !important;
+}
+
+html.light .text-white {
+  color: #0F172A !important;
+}
+
+html.light .text-slate-200,
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748B !important;
+}
+
+html.light .border-slate-800,
+html.light .border-slate-800\/80,
+html.light .border-slate-800\/90,
+html.light .border-slate-700,
+html.light .divide-slate-800\/60 > * + * {
+  border-color: rgba(226, 232, 240, 0.9) !important;
+}
+
+html.light footer {
+  border-color: rgba(226, 232, 240, 0.9) !important;
+}
+
+html.light footer .bg-slate-900\/90 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(226, 232, 240, 0.9) !important;
+  color: #0F172A !important;
+}
+
+html.light footer span.text-slate-300 {
+  color: #334155 !important;
+}
+
+/* Matrix & Card specific light mode tweaks */
+html.light .comparison-matrix table th.bg-slate-900 {
+  background-color: #F1F5F9 !important;
+  color: #0F172A !important;
+}
+
+html.light .comparison-matrix table th.bg-slate-900\/60 {
+  background-color: #F8FAFC !important;
+  color: #475569 !important;
+}
+
+html.light .comparison-matrix table th.bg-red-950\/60 {
+  background-color: rgba(254, 226, 226, 0.7) !important;
+  color: #991B1B !important;
+}
+
+html.light .comparison-matrix table td.bg-red-950\/20 {
+  background-color: rgba(254, 226, 226, 0.35) !important;
+}
+
+html.light .filter.invert {
+  filter: none !important;
 }
