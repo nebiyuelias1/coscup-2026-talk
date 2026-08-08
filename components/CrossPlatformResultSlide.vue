@@ -1,30 +1,32 @@
 <template>
-  <div
-    class="cross-platform-result-slide w-full my-auto flex flex-col justify-center h-full overflow-hidden"
-  >
-    <!-- Header with Architecture Breakdown Toggle -->
+  <div class="cross-platform-result-slide w-full my-auto flex flex-col justify-center h-full overflow-hidden">
+    <!-- Clean Minimalist Header with Breakdown Button -->
     <div class="flex justify-between items-center mb-1.5">
       <h2 class="text-xl font-black tracking-tight text-white m-0 text-left">
-        The Result:
-        <span
-          class="text-red-500"
-          >Native + HTML hybrid</span
-        >
+        {{ currentLang === 'zh' ? '成果展示：' : 'The Result:' }}
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-blue-400">
+          {{ currentLang === 'zh' ? '原生與 HTML 混合架構 📱🌐' : 'Native + HTML hybrid 📱🌐' }}
+        </span>
       </h2>
 
       <!-- Toggle Architecture Callouts Button -->
       <button
         @click="showBreakdown = !showBreakdown"
         :class="[
-          'px-2.5 py-1 rounded-lg border font-mono text-xs font-bold transition-all flex items-center gap-1.5 shadow-md',
+          'px-2.5 py-1 rounded-lg border font-mono text-xs font-bold transition-all flex items-center gap-1.5 shadow-md cursor-pointer',
           showBreakdown
             ? 'bg-red-950/90 border-red-500 text-red-300 ring-1 ring-red-500/50 scale-105'
             : 'bg-slate-900 border-slate-700 text-slate-300 hover:text-white',
         ]"
       >
-        <span>{{
-          showBreakdown ? "❌ Reset Screenshots" : "🎯 Highlight Native vs HTML"
-        }}</span>
+        <span>
+          <template v-if="showBreakdown">
+            {{ currentLang === 'zh' ? '❌ 重設預覽' : '❌ Reset Screenshots' }}
+          </template>
+          <template v-else>
+            {{ currentLang === 'zh' ? '🎯 高亮 Native 與 HTML 區域' : '🎯 Highlight Native vs HTML' }}
+          </template>
+        </span>
       </button>
     </div>
 
@@ -49,6 +51,11 @@
             alt="Web Browser Result"
             class="w-full h-full object-contain rounded"
           />
+          <div v-else class="p-2 text-center space-y-0.5">
+            <span class="text-xl">🌐</span>
+            <div class="text-[10px] font-mono text-red-300 font-bold">Web Screenshot</div>
+            <div class="text-[8px] text-slate-500 font-mono">result_web.jpg</div>
+          </div>
 
           <!-- Red Outline Overlay for Web Browser -->
           <div
@@ -83,6 +90,11 @@
             alt="iOS App Result"
             class="w-full h-full object-contain rounded"
           />
+          <div v-else class="p-2 text-center space-y-0.5">
+            <span class="text-xl">🍏</span>
+            <div class="text-[10px] font-mono text-blue-300 font-bold">iOS Screenshot</div>
+            <div class="text-[8px] text-slate-500 font-mono">result_ios.jpg</div>
+          </div>
 
           <!-- Red Outline Overlays for iOS -->
           <div
@@ -144,6 +156,11 @@
             alt="Android App Result"
             class="w-full h-full object-contain rounded"
           />
+          <div v-else class="p-2 text-center space-y-0.5">
+            <span class="text-xl">🤖</span>
+            <div class="text-[10px] font-mono text-emerald-300 font-bold">Android Screenshot</div>
+            <div class="text-[8px] text-slate-500 font-mono">result_android.jpg</div>
+          </div>
 
           <!-- Red Outline Overlays for Android -->
           <div
@@ -191,6 +208,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { currentLang } from '../composables/useLang'
 
 const showBreakdown = ref(false);
 
