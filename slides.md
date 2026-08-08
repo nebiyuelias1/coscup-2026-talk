@@ -188,3 +188,10 @@ transition: slide-up
 class: text-center ruby-hero
 ---
 <PortfolioTalksSlide />
+
+---
+transition: slide-up
+class: text-center ruby-hero
+---
+<SlidoQASlide />
+
